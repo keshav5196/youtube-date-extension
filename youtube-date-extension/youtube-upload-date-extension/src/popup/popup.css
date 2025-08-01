@@ -1,0 +1,33 @@
+/* src/popup/popup.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    width: 250px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h1 {
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    font-size: 14px;
+}
+
+select, input[type="checkbox"] {
+    font-size: 14px;
+}
