@@ -10,7 +10,12 @@
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     pointer-events: none; /* So it doesn't interfere with video controls */
-    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.youtube-date-overlay-base.visible {
+    opacity: 1;
 }
 
 .position-top-right {
