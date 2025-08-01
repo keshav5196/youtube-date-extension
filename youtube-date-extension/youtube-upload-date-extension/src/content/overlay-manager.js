@@ -4,8 +4,9 @@ class OverlayManager {
     /**
      * Creates and displays an overlay with the given text on the video.
      * @param {string} text The text to display in the overlay.
+     * @param {object} settings The user-defined settings.
      */
-    static showOverlay(text) {
+    static showOverlay(text, settings) {
         // Remove any existing overlay first.
         this.removeOverlay();
 
@@ -19,16 +20,9 @@ class OverlayManager {
         overlay.id = 'youtube-date-overlay';
         overlay.textContent = text;
         
-        // Apply some basic styling. This will be enhanced by overlay.css.
-        overlay.style.position = 'absolute';
-        overlay.style.top = '10px';
-        overlay.style.right = '10px';
-        overlay.style.zIndex = '9999';
-        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-        overlay.style.color = 'white';
-        overlay.style.padding = '5px 10px';
-        overlay.style.borderRadius = '5px';
-        overlay.style.fontSize = '14px';
+        // Apply classes based on settings
+        overlay.classList.add('youtube-date-overlay-base');
+        overlay.classList.add(`position-${settings.position || 'top-right'}`);
 
         videoContainer.appendChild(overlay);
     }
